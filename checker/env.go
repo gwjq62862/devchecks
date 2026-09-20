@@ -12,6 +12,7 @@ func CheckEnv(name string) Result {
 
 	if !exists {
 		return Result{
+			Name:    name,
 			Status:  false,
 			Type:    "ENV",
 			Message: "environment variable is not set",
@@ -20,6 +21,7 @@ func CheckEnv(name string) Result {
 	}
 	if exists && val == ""{
          return Result{
+			Name:    name,
 			Status: false,
 			Type: "ENV",
 			Message: "environment variable is empty",
@@ -27,6 +29,7 @@ func CheckEnv(name string) Result {
 		 }
 	}
      return Result{
+		Name:    name,
 		Status: true,
 		Type: "ENV",
 		Message: "OK",

@@ -13,6 +13,7 @@ func CheckHost(address string) Result {
 
 	if err != nil {
 		return Result{
+			Name:    address,
 			Status:  false,
 			Type:    "HOST",
 			Message: err.Error(),
@@ -22,6 +23,7 @@ func CheckHost(address string) Result {
 
 	defer con.Close()
 	return Result{
+		Name:    address,
 		Status:  true,
 		Type:    "HOST",
 		Message: "OK",
