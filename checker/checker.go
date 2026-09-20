@@ -1,7 +1,7 @@
 package checker
 
 import (
-	goterminal "devchecks"
+	"devchecks/config"
 	"sync"
 	"time"
 )
@@ -14,7 +14,7 @@ type Result struct {
 	Latency time.Duration
 }
 
-func RunChecks(cfg *goterminal.DevConfig) []Result {
+func RunChecks(cfg *config.DevConfig) []Result {
 	resultChannel := make(chan Result)
 	var wg sync.WaitGroup
 

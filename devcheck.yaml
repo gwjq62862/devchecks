@@ -1,0 +1,8 @@
+envs:
+  - PORT
+  - DATABASE_URL
+  - NON_EXISTENT_VAR
+
+hosts:
+  - google.com:80
+  - localhost:5432

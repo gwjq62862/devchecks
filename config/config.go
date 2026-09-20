@@ -1,4 +1,4 @@
-package goterminal
+package config
 
 import (
 	"fmt"
